@@ -10,11 +10,12 @@ const changeReturnDiv =document.querySelector(".changeReturn");
 const output= document.querySelector("#output");
 
 const nextBtn= document.querySelector("#nextBtn");
+
 const checkBtn= document.querySelector("#checkBtn");
 
-const noOfNotes = document.querySelector(".noOfNotes");
+const noOfNotes = document.querySelectorAll(".noOfNotes");
 
-const arrayNoteAmt = [2000,500,100,20,10,5,1];
+const arrayNoteAmt = [2000,500,100,50,20,10,5,1];
 
 //if bill amount entered, display cash given input field
 nextBtn.addEventListener('click', ()=>{
@@ -73,7 +74,7 @@ function calculateNotes(bill,cash){
 //compare with currency and post the no. of notes on screen
 
 function compare(remainder, noteAmt, index){
-    if( remainder >=noteAmt){
+    if( remainder >= noteAmt){
         let notes= Math.floor(remainder/noteAmt);
         remainder=remainder-notes*noteAmt;
         noOfNotes[index].innerText = `${notes}`;
@@ -85,7 +86,7 @@ function compare(remainder, noteAmt, index){
 //if check button clicked without refreshing the page, clear the no of notes value of the screen
 function clearNoOfNotes(){
     for(let notes of noOfNotes){
-        notes.innerText="";
+        notes.innerText = "";
     }
 }
 
@@ -98,7 +99,4 @@ function showError(text){
 function hideError(){
     errorDiv.style.display="none";
 }
-
-
-
 
