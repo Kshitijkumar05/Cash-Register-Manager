@@ -7,43 +7,56 @@
     <title>Cash Register Manager</title>
 </head>
 <body>
-    <div class="container">
+    <section class="section">
         <h1>Cash Register Manager</h1>
         <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return</p>
-        <label>Bill Amount</label>
-        <input type="number" />
-        <label>Cash Given:</label>
-        <input type="number"/>
-        <div >
-            <input type="button" name="Check" value="check"/>
-
+        <div>
+            <label class="label">Bill Amount:</label>
+            <input  type="number" id="billAmount"/>
+            <button id="nextBtn">Next</button>
         </div>
-        <label>Return Change:</label>
-        <table>
-            <tr>
-                <td>No.of Notes</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Note</td>
-                <td>2000</td>
-                <td>500</td>
-                <td>100</td>
-                <td>50</td>
-                <td>20</td>
-                <td>10</td>
-                <td>5</td>
-                <td>1</td>
-            </tr>
-        </table>
 
-    </div>
+        <div class="cashGivenInput">
+            <label class="label">Cash Given:</label>
+            <input type="number" id="cashGiven"/>
+            <button id="checkBtn">Check</button>
+        </div>
+        <div class="errorMsg"></div>
+        
+        <div class="changeReturn" >
+            <div class="label">Return Change:</div>
+            <div id="output">
+                <table>
+                    <tr>
+                        <th>No.of Notes</th>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                        <td class="noOfNotes"></td>
+                    </tr>
+                    <tr>
+                        <th>Note</th>
+                        <td>2000</td>
+                        <td>500</td>
+                        <td>100</td>
+                        <td>50</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>5</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+        
+
+            </div>
+            </div>
+        
+       
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
